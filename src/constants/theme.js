@@ -1,4 +1,4 @@
-const Colors = {
+const colors = {
     accent: "#F3534A",
     primary: "#0AC4BA",
     secondary: "#2BDA8E",
@@ -26,7 +26,7 @@ const sizes = {
     caption: 12,
 };
   
-const Fonts = {
+const fonts = {
     h1: {
         fontSize: sizes.h1
     },
@@ -50,4 +50,4 @@ const Fonts = {
     },
 };
 
-export { Colors, sizes, Fonts };
+export { colors, sizes, fonts };

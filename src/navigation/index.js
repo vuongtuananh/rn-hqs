@@ -2,7 +2,7 @@ import React from 'react';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 import { Image } from 'react-native';
 
-import { screens, themes } from '../constants';
+import { screens, theme } from '../constants';
 
 import Welcome from "../screens/Welcome";
 import Browse from "../screens/Browse";
@@ -24,8 +24,8 @@ const appScreens = createStackNavigator({
     initialRouteName: 'Welcome',
     defaultNavigationOptions: {
         headerStyle: {
-            height: themes.sizes.base * 4,
-            backgroundColor: themes.Colors.white, // or 'white
+            height: theme.sizes.base * 4,
+            backgroundColor: theme.colors.white, // or 'white
             borderBottomColor: "transparent",
             elevation: 0, // for android
         },
@@ -33,12 +33,12 @@ const appScreens = createStackNavigator({
         headerBackTitle: null,
         headerLeftContainerStyle: {
             alignItems: 'center',
-            marginLeft: themes.sizes.base * 2,
-            paddingRight: themes.sizes.base,
+            marginLeft: theme.sizes.base * 2,
+            paddingRight: theme.sizes.base,
         },
         headerRightContainerStyle: {
             alignItems: 'center',
-            paddingRight: themes.sizes.base,
+            paddingRight: theme.sizes.base,
         },
     },
 });
