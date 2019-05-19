@@ -116,6 +116,8 @@ export default class Block extends Component {
       animated,
       wrap,
       style,
+      height,
+      width,
       children,
       ...props
     } = this.props;
@@ -138,6 +140,8 @@ export default class Block extends Component {
       shadow && styles.shadow,
       space && { justifyContent: `space-${space}` },
       wrap && { flexWrap: 'wrap' },
+      height && { height },
+      width && { width },
       color && styles[color], // predefined styles colors for backgroundColor
       color && !styles[color] && { backgroundColor: color }, // custom backgroundColor
       style, // rewrite predefined styles
