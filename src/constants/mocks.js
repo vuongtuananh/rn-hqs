@@ -41,6 +41,13 @@ const categories = [
       count: 47,
       image: require('../../assets/icons/fertilizers.png')
     },
+    {
+      id: 'fertilizers2',
+      name: 'fertilizers2',
+      tags: ['products', 'shop'],
+      count: 49,
+      image: require('../../assets/icons/fertilizers.png')
+    },
   ];
   
   const products = [
