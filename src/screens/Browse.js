@@ -70,7 +70,7 @@ class Browse extends Component {
                         categories.map(category => (
                             <TouchableOpacity
                                 key={category.id}
-                                onPress={() => console.log('anhvt14 - go to category')}
+                                onPress={() => navigation.navigate('Products') }
                             >
                                 <Card center middle shadow style={styles.category}>
                                     <Badge margin={[0, 0, 15]} size={50} color="rgba(41,216,143,0.20)">

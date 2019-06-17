@@ -4,7 +4,6 @@ import {AppLoading, Asset  } from "expo";
 
 import AppNavigation from "./src/navigation";
 import { Block } from "./src/components";
-import BloodRequest from './src/screens/blood/BloodRequest'
 
 // import all used images
 const images = [
@@ -57,7 +56,6 @@ export default class App extends React.Component {
             <Block flex={1}>
                 <AppNavigation />
             </Block>
-            // {/* <BloodRequest /> */}
         )
     }
 }
