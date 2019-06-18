@@ -1,5 +1,5 @@
 import React from 'react';
-import { createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
+import { createAppContainer, createStackNavigator, createSwitchNavigator, createDrawerNavigator } from 'react-navigation';
 import { Image } from 'react-native';
 
 import { strings, theme } from '../constants';
@@ -12,6 +12,7 @@ import Products from "../screens/Products";
 import Settings from "../screens/Settings";
 import SignUp from "../screens/SignUp";
 import AuthLoadingScreen from '../screens/AuthLoadingScreen';
+import MyDrawerContent from './MyDrawerContent';
 
 const defaultHeader = {
     headerStyle: {
@@ -33,19 +34,24 @@ const defaultHeader = {
     },
 }
 
-const AppStack = createStackNavigator({
+const AppStack = createDrawerNavigator({
+    [strings.appScreens.Browse]: Browse,
     [strings.appScreens.Products]: Products,
     [strings.appScreens.Settings]: Settings,
-    [strings.appScreens.Browse]: Browse
 }, {
     initialRouteName: strings.appScreens.Browse,
-    defaultNavigationOptions: defaultHeader,
+    drawerWidth: 300,
+    drawerPosition: 'left',
+    drawerType: 'slide',
+    drawerBackgroundColor:'#fff',
+    contentComponent: MyDrawerContent,
 });
 
 const LoginStack = createStackNavigator({
     [strings.appScreens.Login]: Login,
     [strings.appScreens.SignUp]: SignUp,
-    [strings.appScreens.Welcome]: Welcome
+    [strings.appScreens.Welcome]: Welcome,
+    [strings.appScreens.ForgotPassword]: ForgotPassword,
 }, {
     initialRouteName: strings.appScreens.Welcome,
     defaultNavigationOptions: defaultHeader,

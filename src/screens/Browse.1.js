@@ -7,7 +7,6 @@ const tabs = ['Products', 'Inspirations', 'Shop'];
 const { width, height } = Dimensions.get('window');
 
 class Browse extends Component {
-
     constructor(props) {
         super(props);
         this.state = { 

@@ -7,7 +7,8 @@ const appMessages = {
     LOGIN: 'Login',
     EMAIL: 'Email',
     PASSWORD: 'Password',
-    FORGOT_PASSWORD: 'Forgot your password?'
+    FORGOT_PASSWORD: 'Forgot your password?',
+    STORE_NAME: 'Chi Nhánh Trung Tâm',
 };
 
 const appStrings = {
