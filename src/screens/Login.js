@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { ActivityIndicator, Keyboard, KeyboardAvoidingView, StyleSheet } from 'react-native'
+import { ActivityIndicator, Keyboard, KeyboardAvoidingView, StyleSheet, AsyncStorage } from 'react-native'
 
 import { Button, Block, Input, Text } from '../components';
-import { theme, messages } from "../constants";
+import { theme, strings } from "../constants";
 
-const VALID_EMAIL = messages.appMessages.EMAIL_PLACEHOLDER;
-const VALID_PASSWORD = messages.appMessages.PASSWORD_PLACEHOLDER;
+const VALID_EMAIL = strings.appMessages.EMAIL_PLACEHOLDER;
+const VALID_PASSWORD = strings.appMessages.PASSWORD_PLACEHOLDER;
 const { 
     LOGIN, 
     EMAIL_PLACEHOLDER, 
@@ -13,7 +13,7 @@ const {
     EMAIL,
     PASSWORD,
     FORGOT_PASSWORD,
-} = messages.appMessages;
+} = strings.appMessages;
 
 class Login extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class Login extends Component {
          };
     }
 
-    handleLogin = () => {
+    handleLogin = async () => {
         const { email, password } = this.state;
         const { navigation } = this.props;
         const errors = [];
@@ -40,12 +40,13 @@ class Login extends Component {
         if(!email || email !== VALID_EMAIL) errors.push(EMAIL);
         if(!password || password !== VALID_PASSWORD) errors.push(PASSWORD);
 
+        await AsyncStorage.setItem(strings.appStrings.USER_TOKEN, 'abc');
         setTimeout(() => {
             this.setState({
                 errors,
                 isLoading: false
             });
-            if(errors.length < 1) navigation.navigate('Browse');
+            if(errors.length < 1) navigation.navigate(strings.appScreens.App);
         }, 1000)
     }
     render() {

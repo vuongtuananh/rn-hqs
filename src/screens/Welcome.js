@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Animated, Dimensions, Image, FlatList, Modal, ScrollView } from 'react-native';
 
 import { Block, Text, Button } from "../components";
-import { theme, messages } from "../constants";
+import { theme, strings } from "../constants";
 
 const { width, height } = Dimensions.get('window');
 class Welcome extends Component {
@@ -126,10 +126,10 @@ class Welcome extends Component {
                 {/* header */}
                 <Block center bottom flex={0.4}>
                     <Text h1 bold center>
-                        {messages.appMessages.APP_TITLE_1} <Text h1 primary> {messages.appMessages.APP_TITLE_2}</Text>
+                        {strings.appMessages.APP_TITLE_1} <Text h1 primary> {strings.appMessages.APP_TITLE_2}</Text>
                     </Text>
                     {/* <Text h3 gray2 styles={{ marginTop: theme.sizes.padding / 2}}>
-                        {messages.appMessages.APP_SUB_TITLE}
+                        {strings.appMessages.APP_SUB_TITLE}
                     </Text> */}
                 </Block>
 

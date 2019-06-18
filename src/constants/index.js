@@ -1,11 +1,9 @@
 import * as theme from './theme';
 import * as mocks from './mocks';
-import * as screens from './screens';
-import * as messages from './messages.constant'
+import * as strings from './strings'
 
 export {
     theme,
     mocks,
-    screens,
-    messages,
+    strings,
 };
