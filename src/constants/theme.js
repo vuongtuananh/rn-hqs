@@ -25,7 +25,7 @@ const sizes = {
     body: 14,
     caption: 12,
 };
-  
+
 const fonts = {
     h1: {
         fontSize: sizes.h1
@@ -50,4 +50,8 @@ const fonts = {
     },
 };
 
-export { colors, sizes, fonts, };
+const dimensions = {
+    heightHeader: 40,
+};
+
+export { colors, sizes, fonts, dimensions, };

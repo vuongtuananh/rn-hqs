@@ -8,7 +8,7 @@ import Welcome from "../screens/Welcome";
 import Browse from "../screens/Browse";
 import ForgotPassword from "../screens/ForgotPassword";
 import Login from "../screens/Login";
-import Products from "../screens/Products";
+import Products from "../screens/sales/Products";
 import Settings from "../screens/Settings";
 import SignUp from "../screens/SignUp";
 import AuthLoadingScreen from '../screens/AuthLoadingScreen';
