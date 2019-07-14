@@ -22,10 +22,14 @@ const appScreens = {
     Welcome: 'Welcome',
     Browse: 'Browse',
     ForgotPassword: 'ForgotPassword',
-    Login: 'Login',
     Products: 'Products',
     Settings: 'Settings',
     SignUp: 'SignUp',
+
+    // fms
+    FmsStack: 'FmsStack',
+    Dashboard: 'Dashboard',
+    Listing : 'Listing',
 }
 
 export {

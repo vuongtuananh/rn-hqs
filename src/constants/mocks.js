@@ -49,6 +49,121 @@ const categories = [
       image: require('../../assets/icons/fertilizers.png')
     },
   ];
+
+const deviations = [
+    {
+        id: 1,
+        name: 'Lim Ming Joon',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 2,
+        name: 'Narul Nabila',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 3,
+        name: 'Tan Chee Boon',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 4,
+        name: 'Zarifah De Limah',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 5,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 6,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 7,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 8,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 9,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 10,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 11,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 12,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 13,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 14,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 15,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+    {
+        id: 16,
+        name: 'Seven Eleven',
+        deviationNo: '201905-0038',
+        date: '17/05/2019',
+        image: require('../../assets/icons/plants.png'),
+    },
+];
   
   const products = [
     {
@@ -97,4 +212,5 @@ const categories = [
     explore,
     products,
     profile,
+    deviations,
   }

@@ -13,6 +13,8 @@ import Settings from "../screens/Settings";
 import SignUp from "../screens/SignUp";
 import AuthLoadingScreen from '../screens/AuthLoadingScreen';
 import MyDrawerContent from './MyDrawerContent';
+import Dashboard from '../screens/fms/Dashboard';
+import Listing from '../screens/fms/Listing';
 
 const defaultHeader = {
     headerStyle: {
@@ -57,12 +59,42 @@ const LoginStack = createStackNavigator({
     defaultNavigationOptions: defaultHeader,
 });
 
+const FmsStack = createStackNavigator({
+    [strings.appScreens.Dashboard]: Dashboard,
+    [strings.appScreens.Browse]: Browse,
+    [strings.appScreens.Listing]: Listing,
+}, {
+    initialRouteName: strings.appScreens.Dashboard,
+    defaultNavigationOptions: {
+        headerStyle: {
+            height: theme.dimensions.header.height,
+            backgroundColor: theme.colors.gray4,
+            borderBottomColor: "transparent",
+        },
+        headerTitleContainerStyle: {
+            alignItems: 'flex-end',
+            paddingLeft: theme.sizes.padding,
+        },
+        headerLeftContainerStyle: {
+            alignItems: 'flex-end',
+            marginLeft: theme.sizes.padding,
+            paddingRight: theme.sizes.base,
+        },
+        headerRightContainerStyle: {
+            alignItems: 'flex-end',
+            marginRight: theme.sizes.padding,
+        },
+    },
+    headerLayoutPreset: 'left'
+});
+
 const AppContainer = createSwitchNavigator({
     [strings.appScreens.AuthLoading]: AuthLoadingScreen,
     [strings.appScreens.App]: AppStack,
     [strings.appScreens.Login]: LoginStack,
+    [strings.appScreens.FmsStack]: FmsStack,
 }, {
-    initialRouteName: strings.appScreens.AuthLoading
+    initialRouteName: strings.appScreens.FmsStack
 });
 
 export default AppNavigation =  createAppContainer(AppContainer);

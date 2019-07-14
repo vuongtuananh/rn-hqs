@@ -7,6 +7,8 @@ const colors = {
     white: "#FFFFFF",
     gray: "#9DA3B4",
     gray2: "#C5CCD6",
+    gray3: "#F0F0F0",
+    gray4: "#F7F8FA",
 };
 
 const sizes = {
@@ -25,21 +27,26 @@ const sizes = {
     body: 14,
     caption: 12,
 };
-  
+
 const fonts = {
     h1: {
+        fontFamily: "Rubik-Light",
         fontSize: sizes.h1
     },
     h2: {
+        fontFamily: "Rubik-Medium",
         fontSize: sizes.h2
     },
     h3: {
+        fontFamily: "Rubik-Regular",
         fontSize: sizes.h3
     },
     header: {
-        fontSize: sizes.header
+        fontSize: sizes.header,
+        fontFamily: "Rubik-Bold",
     },
     title: {
+        fontFamily: "Rubik-Regular",
         fontSize: sizes.title
     },
     body: {
@@ -50,4 +57,11 @@ const fonts = {
     },
 };
 
-export { colors, sizes, fonts, };
+const dimensions = {
+    header: {
+        height: 60,
+        width: '100%'
+    }
+}
+
+export { colors, sizes, fonts, dimensions };

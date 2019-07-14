@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {AppLoading, Asset  } from "expo";
+import {AppLoading, Asset, Font  } from "expo";
 
 import AppNavigation from "./src/navigation";
 import { Block } from "./src/components";
@@ -39,7 +39,17 @@ export default class App extends React.Component {
         const cacheImages = images.map(image => {
             return Asset.fromModule(image).downloadAsync();
         })
-        return Promise.all(cacheImages);
+        return Promise.all([
+            cacheImages,
+            Font.loadAsync({
+                "Rubik-Regular": require("./assets/fonts/Rubik-Regular.ttf"),
+                "Rubik-Black": require("./assets/fonts/Rubik-Black.ttf"),
+                "Rubik-Bold": require("./assets/fonts/Rubik-Bold.ttf"),
+                "Rubik-Italic": require("./assets/fonts/Rubik-Italic.ttf"),
+                "Rubik-Light": require("./assets/fonts/Rubik-Light.ttf"),
+                "Rubik-Medium": require("./assets/fonts/Rubik-Medium.ttf"),
+            })
+        ]);
     }
     render() {
         const { isLoadingComplete } = this.state;
