@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons';
 import { CircularProgress } from 'react-native-circular-progress';
 
 import { Text, Block, Card } from '../../components';
-import { theme } from '../../constants';
+import { theme, strings } from '../../constants';
 
 class Dashboard extends Component {
 
-    static navigationOptions = () => {
+    static navigationOptions = ({navigation}) => {
         return {
             headerTitle: (
                 <Block center middle>
@@ -18,7 +18,9 @@ class Dashboard extends Component {
                 </Block>
             ),
             headerLeft: null,
-            headerRight: null,
+            headerRight: <TouchableOpacity onPress={() => navigation.navigate(strings.appScreens.Listing)}>
+                <Text>Next</Text>
+            </TouchableOpacity>
         }
     }
 
